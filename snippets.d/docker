@@ -1,0 +1,7 @@
+docker system prune -a --volumes
+docker ps -aqf status=exited | xargs docker rm -v # 起動していないContainerを削除
+docker images -qf dangling=true | xargs docker rmi # タグのついていないImage削除
+docker volume ls -qf dangling=true | xargs docker volume rm # どのContainerにも紐づいていないVolumeを削除
+
+docker run -p 80:8080 -v (pwd):/tmp -e SWAGGER_FILE=/tmp/$OAS_FILE_PATH swaggerapi/swagger-editor
+docker run -p 80:8080 -v (pwd):/tmp -e SWAGGER_JSON=/tmp/$OAS_FILE_PATH swaggerapi/swagger-ui

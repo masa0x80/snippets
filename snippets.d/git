@@ -1,0 +1,48 @@
+git add
+git add --all
+
+git commit --allow-empty -m 'Initial commit'
+git commit -v
+git commit -v --amend
+git commit --fixup (git fzf)
+
+git push origin (git_current_branch)
+git push --force-with-lease origin (git_current_branch) # force-push
+
+git branch
+git branch -a
+git branch --remote
+
+git switch $BRANCH_NAME #checkout
+git checkout
+git cherry-pick $COMMIT_HASH
+
+git diff --cached
+git diff --staged
+
+git merge --no-ff
+
+git log --stat --color
+git log --stat --color -p
+git log --oneline --decorate --color --graph # コミットグラフ
+
+git rebase $REBASE_TARGET_BRANCH_NAME
+
+git rebase --abort
+git rebase --continue
+git rebase --skip
+git rebase -i (git fzf)
+
+git reset HEAD
+git reset HEAD --hard
+git reset --
+
+git show
+git status -sb
+git tag -s
+
+git switch -c $NEW_BRANCH_NAME
+git review GH # review
+
+git stash
+git stash pop

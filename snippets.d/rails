@@ -1,0 +1,8 @@
+rails new $PROJECT_NAME --database=mysql --skip-bundle --skip-test --skip-turbolinks --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-active-storage
+rails new . --database=mysql --skip-bundle --skip-test --skip-turbolinks --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-active-storage # 先にディレクトリーを作った場合 [new]
+
+rails g scaffold $MODEL name:string:index email:string:unique
+rails g controller $MODELS --helper=false --assets=false
+rails g model $MODELS
+
+rails g migration $AddColumnNameToTableName $new_column:$integer

@@ -1,0 +1,6 @@
+bundle config set path 'vendor/bundle'; bundle binstubs --path=vendor/bin; bundle install --jobs=4
+bundle config set path 'vendor/bundle'; bundle binstubs --path=vendor/bin; bundle install --jobs=4 --local
+
+solargraph download-core; solargraph bundle; solargraph config
+
+ruby -run -e httpd . -p 3000

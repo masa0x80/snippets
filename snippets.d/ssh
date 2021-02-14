@@ -1,0 +1,3 @@
+aws-ssh
+
+xpanes --ssh $host_names

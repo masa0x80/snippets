@@ -1,0 +1,1 @@
+http GET '$URL' 'Authorization: Bearer $API_TOKEN'
